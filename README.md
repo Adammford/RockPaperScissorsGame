@@ -7,19 +7,19 @@ Start of Rock Paper Scissors Game for odin project:
 
 Game will be played against a computer:
 
-ESTABLISH playerScore and computerScore;
-    - Initialize the scores with 0;
+<!-- ESTABLISH playerScore and computerScore;
+    - Initialize the scores with 0; -->
 
-ESTABLISH getComputerChoice function:
+<!-- ESTABLISH getComputerChoice function:
     - Establish an array of choices
     - Function will randomly select Rock Paper or Scissors from an array
-    -Return the computerChoice;
+    -Return the computerChoice; -->
 
-ESTABLISH getHumanChoice;
+<!-- ESTABLISH getHumanChoice;
     - Use prompt to get user input;
     - Make it so the choice has to be valid;
     - Make it so the choice is case correct;
-    - Return the userChoice;
+    - Return the userChoice; -->
 
 ESTABLISH playRound function and logic:
     - playRound should take in two parameters
