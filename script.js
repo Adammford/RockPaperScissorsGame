@@ -3,22 +3,37 @@ let playerScore = 0;
 let computerScore = 0;
 const choices = ["paper", "rock", "scissors"];
 
+const ROCK = document.querySelector(".rock");
+const PAPER = document.querySelector(".paper");
+const SCISSORS = document.querySelector(".scissors");
+const PLAYBTN = document.querySelector(".start")
+let PLAYERSCORE = document.querySelector(".playerScore");
+let COMPUTERSCORE = document.querySelector(".computerScore");
+
 function getComputerChoice() {
     let computerChoice = choices[Math.floor(Math.random() * choices.length)];
     return computerChoice;
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt("Rock, Paper, or Scissors? ").toLowerCase();
+ROCK.addEventListener("click", () => {
+   playRound(getHumanChoice('rock'), getComputerChoice());
+    
+});
+PAPER.addEventListener('click', () => {getHumanChoice('paper')});
+SCISSORS.addEventListener('click',() => {getHumanChoice('scissors')});
+
+function getHumanChoice(choice) {
+    console.log(choice);
+    let humanChoice = choice;
     let isValid = 0;
 
     while (isValid ==  0) {
         if (choices.includes(humanChoice)) {
             isValid = 1;
             return humanChoice;
-        } else {
-            humanChoice = prompt("Invalid Choice: Please choose Rock, Paper, Scissors: ");
-            };
+        // } else {
+        //   humanChoice = prompt("Invalid Choice: Please choose Rock, Paper, Scissors: ");
+        };
     };
 }
 
@@ -43,13 +58,8 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function playGame() {
-    let x = 0;
-    while (5 > x){
-        let playerChoice = getHumanChoice();
-        let computerChoice = getComputerChoice();
-        playRound(playerChoice, computerChoice);
-        x++;
-    }
+
+
     if (playerScore == computerScore) {
         console.log(`It's a tie! You both lose at life.`)
     } else if (playerScore > computerScore) {
@@ -59,4 +69,5 @@ function playGame() {
     }
 }
 
-playGame();
+PLAYERSCORE.textContent = playerScore;
+COMPUTERSCORE.textContent = computerScore;
