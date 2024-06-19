@@ -26,15 +26,15 @@ function playRound(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         text.textContent = `It's a tie! Both chose ${playerChoice}!`
         console.log(`It's a tie! Both chose ${playerChoice}!`);
-    } else if (playerChoice == 'rock' && computerChoice == 'paper') {
+    } else if (playerChoice == 'Rock' && computerChoice == 'Paper') {
         text.textContent = `Computer wins! ${computerChoice} beats ${playerChoice}!`
         console.log(`Computer wins! ${computerChoice} beats ${playerChoice}!`);
         computerScore++;
-    } else if (playerChoice == 'paper' && computerChoice == 'scissors') {
+    } else if (playerChoice == 'Paper' && computerChoice == 'Scissors') {
         text.textContent = `Computer wins! ${computerChoice} beats ${playerChoice}!`
         console.log(`Computer wins! ${computerChoice} beats ${playerChoice}!`);
         computerScore++;
-    } else if (playerChoice == 'scissors' && computerChoice == 'rock') {
+    } else if (playerChoice == 'Scissors' && computerChoice == 'Rock') {
         text.textContent = `Computer wins! ${computerChoice} beats ${playerChoice}!`
         console.log(`Computer wins! ${computerChoice} beats ${playerChoice}!`);
         computerScore++;
